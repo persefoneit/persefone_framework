@@ -1,27 +1,4 @@
 <?
-
-/*
-
-$aaa= new persefone_fileUpload();
-$aaa->SettaDirectory("test");
-$aaa->SettaNomeCampo("nome");
-$aaa->SettaEstensioni("jpg,png,bmp");
-$aaa->SettaNomeFile("nuovonome");
-$aaa->SettaDimensioneMassima(290); //in kb
-$aaa->SettaPrefisso("xxxxxxxx");
-if($aaa->CaricaFile()==1)echo "ok";
-else echo $aaa->RitornaErrore();
-
-?>
-
-<form method="post" enctype="multipart/form-data">
-<input type="file" name="nome">
-<input type="submit">
-</form>
-
-
-*/
-
 class persefone_fileUpload{
 
 	var $estensioniSupportate;
@@ -103,7 +80,7 @@ class persefone_fileUpload{
 
 			}else{
 
-				$this->messaggioErrore = "Si è verificato un errore ";
+				$this->messaggioErrore = "Si Ã¨ verificato un errore ";
 
 				switch ($_FILES[$this->nomeCampoFile]['error']) { 
 					case 0:
@@ -119,7 +96,7 @@ class persefone_fileUpload{
 		                $this->messaggioErrore .= "Upload eseguito parzialmente"; 
 		                break; 
 		            case 4: 
-		                $this->messaggioErrore .= "Nessun file è stato inviato"; 
+		                $this->messaggioErrore .= "Nessun file Ã¨ stato inviato"; 
 		                break; 
 		            case 6: 
 		                $this->messaggioErrore .= "Mancanza della cartella temporanea. Inserito in PHP 4.3.10 e PHP 5.0.3"; 
@@ -128,7 +105,7 @@ class persefone_fileUpload{
 		                $this->messaggioErrore .= "Errore di scrittura su disco. Inserito in PHP 5.1.0."; 
 		                break; 
 		            case 8: 
-		                $this->messaggioErrore .= "Una estensione di PHP ha interotto il caricamento. PHP non fornisce un modo per capire quale estensione ha causato l'interruzione del caricamento; esaminare l'elenco delle estensioni caricate con phpinfo() può essere d'aiuto. Introdotto in PHP 5.2.0."; 
+		                $this->messaggioErrore .= "Una estensione di PHP ha interotto il caricamento. PHP non fornisce un modo per capire quale estensione ha causato l'interruzione del caricamento; esaminare l'elenco delle estensioni caricate con phpinfo() puÃ² essere d'aiuto. Introdotto in PHP 5.2.0."; 
 		                break; 
 		            default: 
 		                $this->messaggioErrore .= "Unknown upload error"; 
@@ -144,7 +121,7 @@ class persefone_fileUpload{
 
 	public function nameToSafe($name, $maxlen = 250){
 
-		$noalpha = 'áéíóúàèìòùäëïöüÁÉÍÓÚÀÈÌÒÙÄËÏÖÜâêîôûÂÊÎÔÛñçÇ@';
+		$noalpha = 'Ã¡Ã©Ã­Ã³ÃºÃ Ã¨Ã¬Ã²Ã¹Ã¤Ã«Ã¯Ã¶Ã¼ÃÃ‰ÃÃ“ÃšÃ€ÃˆÃŒÃ’Ã™Ã„Ã‹ÃÃ–ÃœÃ¢ÃªÃ®Ã´Ã»Ã‚ÃŠÃÃ”Ã›Ã±Ã§Ã‡@';
 		$alpha = 'aeiouaeiouaeiouAEIOUAEIOUAEIOUaeiouAEIOUncCa';
 		$name = substr ($name, 0, $maxlen);
 		$name = strtr ($name, $noalpha, $alpha); 
