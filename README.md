@@ -14,3 +14,4 @@ $file->SettaDimensioneMassima(290); //in kb
 $file->SettaPrefisso("xxxxxxxx");
 if($file->CaricaFile()==1)echo "ok, caricato";
 else echo $file->RitornaErrore();
+
