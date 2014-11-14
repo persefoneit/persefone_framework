@@ -3,6 +3,8 @@ Questa è una raccolta di classi php usate nella ns azienda
 class.fileupload.php
 ===================
 
+Permette di caricare un file in una cartella specifica limitandone dimensione, estensioni.
+
 $file= new persefone_fileUpload();
 
 $file->SettaDirectory("uploads/test");
