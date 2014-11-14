@@ -1,9 +1,7 @@
-persefone_framework
-===================
-
-questa è una raccolta di classi php usate nella ns azienda
+Questa è una raccolta di classi php usate nella ns azienda
 
 class.fileupload.php
+===================
 
 $file= new persefone_fileUpload();
 
