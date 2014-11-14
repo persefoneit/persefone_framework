@@ -4,6 +4,7 @@ class.fileupload.php
 ===================
 
 Permette di caricare un file in una cartella specifica limitandone dimensione, estensioni.
+Esempio di utilizzo:
 
 $file= new persefone_fileUpload();
 
